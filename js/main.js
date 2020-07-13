@@ -23,6 +23,7 @@ $('.category-card').sortable({
   group: 'todo-lists', //to allow swapping between groups
   swap: false , // Enable swap plugin
   animation: 150,
+  handle:'.todo-text',
   ghostClass: 'bg-success', // The class applied to the hovered swap item
 })
 

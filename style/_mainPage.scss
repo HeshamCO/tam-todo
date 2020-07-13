@@ -1,7 +1,7 @@
 #main-content{
   width: 100%;
   margin-right: 200px;
-  transition: margin 0.2s linear;
+  transition: margin 0.1s ease-in-out;
   .top-bar{
     background-color: $todo-bg;
     display: flex;
@@ -44,7 +44,6 @@
       background-color: $todo-bg;
       box-shadow: $default-shadow;
       .todo-item{
-        cursor: grab;
         display: flex;
         padding: 16px;
         justify-content: space-between;
@@ -60,6 +59,8 @@
           cursor: pointer;
           width: 24px;
           height: 24px;
+          background-repeat: no-repeat;
+          background-position: center;
         }
         .icon-unchecked{
           @extend .icon-checkBox;
@@ -72,6 +73,9 @@
         .todo-done{
           text-decoration: line-through;
           opacity: 0.5;
+        }
+        .todo-text{
+          cursor: grab;
         }
         .tag-container{
           justify-content: flex-end;
