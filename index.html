@@ -17,7 +17,6 @@
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
   <script src="js/svg-inject.js"></script>
-  <script src="js/main.js"></script>
 
   <!-- Bootstrap JS, Popper.js, -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -31,7 +30,9 @@
     <!-- side navbar -->
     <aside class="side-nav">
       <img src="assets/logo.png" alt="tam-logo" class="logo">
-      <img src="assets/icon-close.svg" onload="SVGInject(this)" alt="close-icon" id="close-icon"/>
+      <div class="close-icon">
+        <img src="assets/icon-close.svg" onload="SVGInject(this)" alt="close-icon" />
+      </div>
       <nav class="nav">
         <div class="nav-item active">
           <img src="assets/icon-list.svg" onload="SVGInject(this)" class="icon" alt="icon-list" />
@@ -64,7 +65,12 @@
     <div id="main-content">
       <!-- Top content page bar -->
       <div class="top-bar">
-        <div class="row">
+
+        <div class="close-icon" id="open-side-nav-btn">
+          <img src="assets/icon-close.svg" onload="SVGInject(this)" alt="close-icon" />
+        </div>
+        <!-- inputs group -->
+        <div class="d-flex">
           <!-- category dropdown filter -->
           <div class="col dropdown-filter">
             <div class="btn-group">
@@ -84,15 +90,14 @@
             <input type="text" class="form-control" placeholder="بحث">
           </div> <!-- ## End search box ## -->
         </div>
-      </div> <!-- ## End top content page bar ## -->
+      </div>
 
-      <!-- first category section -->
+      <!-- first category section (design)-->
       <section class="category-section">
-
         <div class="category-title">التصميم:</div>
-        <!-- section card -->
+        <!-- *section card -->
         <div class="category-card">
-          <!-- _Todo single item (design) -->
+          <!-- _(design) -->
           <div class="todo-item row">
             <div class="col-10">
               <div>
@@ -103,7 +108,7 @@
               </div>
             </div>
           </div>
-          <!-- _Todo single item (transform)-->
+          <!-- _(transform)-->
           <div class="todo-item row">
             <div class="col-10">
               <div>
@@ -117,7 +122,7 @@
               <span class="tag">css</span>
             </div>
           </div>
-          <!-- _Todo single item (responsive)-->
+          <!-- _(responsive)-->
           <div class="todo-item row">
             <div class="col-10">
               <div>
@@ -131,7 +136,7 @@
               <span class="tag">css</span>
             </div>
           </div>
-          <!-- _Todo single item (IE9 compatible)-->
+          <!-- _(IE9 compatible)-->
           <div class="todo-item row">
             <div class="col-10">
               <div>
@@ -145,7 +150,7 @@
               <span class="tag">Browsers</span>
             </div>
           </div>
-          <!-- _Todo single item (Sass)-->
+          <!-- _(Sass)-->
           <div class="todo-item row">
             <div class="col-10">
               <div>
@@ -161,11 +166,69 @@
           </div>
         </div> <!-- ## End section card ## -->
 
-      </section> <!-- ## End first category section ## -->
+      </section> 
 
+      <!-- second category section (improvements) -->
+      <section class="category-section">
+        <div class="category-title">تحسينات:</div>
+        <!-- *section card -->
+        <div class="category-card">
+          <!-- _(hide) -->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-uncheck.svg" onload="SVGInject(this)" alt="icon-uncheck">
+              </div>
+              <div>
+                إمكانية إخفاء القائمة الجانبية
+              </div>
+            </div>
+          </div>
+          <!-- _(make don)-->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-uncheck-1.svg" onload="SVGInject(this)" alt="icon-unchecked">
+              </div>
+              <div>
+                إمكانية تعليم المهام كمنتهية
+              </div>
+            </div>
+          </div>
+          <!-- _(arrange)-->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-uncheck-1.svg" onload="SVGInject(this)" alt="icon-unchecked">
+              </div>
+              <div>
+                إمكانية إعادة ترتيب المهام والمجموعات
+              </div>
+            </div>
+          </div>
+          <!-- _(touch compatible)-->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-uncheck-1.svg" onload="SVGInject(this)" alt="icon-unchecked">
+              </div>
+              <div>
+                التوافقية مع أجهزة اللمس
+              </div>
+            </div>
+          </div>
+        </div> <!-- ## End section card ## -->
+
+      </section> 
     </div> <!-- ## End main page content ## -->
 
   </div><!-- ## End body wrapper ##-->
+
+
+<script>
+
+</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
