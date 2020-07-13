@@ -8,6 +8,16 @@ $(document).ready(function(){
   });
 });
 
+// to add smooth scrolling for sections dropdown
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
 // sorting todo items (require sortable.JS lib)
 $('.category-card').sortable({
   group: 'todo-lists', //to allow swapping between groups
