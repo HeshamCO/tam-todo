@@ -13,3 +13,16 @@ $('.close-icon').on( "click", function(){
   $('#open-side-nav-btn').toggle()
 })
 
+
+function toggleTodo(element){
+  $(element).toggleClass('icon-unchecked')
+  $(element).toggleClass('icon-check')
+  $(element).next().toggleClass('todo-done')
+}
+// adding listeners in both classes allow it to toggle even when already active (ie: to make the first active work as well)
+$(".icon-check").click(function(){
+  toggleTodo(this)
+});
+$(".icon-unchecked").click(function(){
+  toggleTodo(this)
+});

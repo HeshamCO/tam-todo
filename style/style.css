@@ -213,6 +213,20 @@ body {
   margin-left: 13px;
 }
 
+#main-content .category-section .category-card .todo-item .icon-checkBox, #main-content .category-section .category-card .todo-item .icon-unchecked, #main-content .category-section .category-card .todo-item .icon-check {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+#main-content .category-section .category-card .todo-item .icon-unchecked {
+  background-image: url("/assets/icon-uncheck-1.svg");
+}
+
+#main-content .category-section .category-card .todo-item .icon-check {
+  background-image: url("/assets/icon-check.svg");
+}
+
 #main-content .category-section .category-card .todo-item .todo-done {
   text-decoration: line-through;
   opacity: 0.5;

@@ -56,6 +56,19 @@
             margin-left: 13px;
           }
         }
+        .icon-checkBox{
+          cursor: pointer;
+          width: 24px;
+          height: 24px;
+        }
+        .icon-unchecked{
+          @extend .icon-checkBox;
+          background-image: url('/assets/icon-uncheck-1.svg');
+        }
+        .icon-check{
+          @extend .icon-checkBox;
+          background-image: url('/assets/icon-check.svg');
+        }
         .todo-done{
           text-decoration: line-through;
           opacity: 0.5;
