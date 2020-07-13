@@ -1,3 +1,13 @@
+// search input trigger, to search throw todo items
+$(document).ready(function(){
+  $("#searchInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".category-section .todo-item").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
 // sorting todo items (require sortable.JS lib)
 $('.category-card').sortable({
   group: 'todo-lists', //to allow swapping between groups
