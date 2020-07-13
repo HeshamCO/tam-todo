@@ -4,10 +4,12 @@
   color: $nav-link-text;
   position: fixed;
   height: 100%;
+  transition: width 0.2s linear;
+  overflow: hidden;
   .logo{
     margin: 16px;
   }
-  #close-icon{
+  .close-icon{
     position: absolute;
     left: 11px;
     top: 11px;
@@ -65,4 +67,8 @@
     }
   }
 
+}
+
+.hide-nav{
+  width: 0;
 }
