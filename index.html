@@ -7,7 +7,7 @@
   <meta name="author" content="Hesham Alhomaidhi">
   <meta name="description" content="ToDo application replica design for frontend assessment">
   <link rel="shortcut icon" href="assets/favicon-32x32.png">
-  
+
   <!-- Bootstrap CSS CDN and main style file-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="style/style.css">
@@ -20,10 +20,11 @@
   <script src="js/main.js"></script>
 
   <!-- Bootstrap JS, Popper.js, -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </head>
+<!-- <img src="assets/icon-user.svg" alt="icon" onerror="this.src='icon-user.png'"> -->
 <body>
   <!-- ## body wrapper ##-->
   <div class="body-wrapper">
@@ -58,6 +59,113 @@
         <img src="assets/icon-arrow-down-small.png" class="icon" alt="icon-arrow-down" />
       </div>
     </aside>  <!-- ## End side navbar ## -->
-  
+
+    <!-- main page content -->
+    <div id="main-content">
+      <!-- Top content page bar -->
+      <div class="top-bar">
+        <div class="row">
+          <!-- category dropdown filter -->
+          <div class="col dropdown-filter">
+            <div class="btn-group">
+              <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              جميع المهام
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">التصميم</a>
+                <a class="dropdown-item" href="#">تحسينات</a>
+                <a class="dropdown-item" href="#">اخرى</a>
+              </div>
+            </div>
+          </div><!-- ## End category dropdown filter ## -->
+
+          <!-- search box -->
+          <div class="col">
+            <input type="text" class="form-control" placeholder="بحث">
+          </div> <!-- ## End search box ## -->
+        </div>
+      </div> <!-- ## End top content page bar ## -->
+
+      <!-- first category section -->
+      <section class="category-section">
+
+        <div class="category-title">التصميم:</div>
+        <!-- section card -->
+        <div class="category-card">
+          <!-- _Todo single item (design) -->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-check.svg" onload="SVGInject(this)" alt="icon-check">
+              </div>
+              <div class="todo-done">
+                تصميم الشكل العام وتجهيز المهام وتسليمه
+              </div>
+            </div>
+          </div>
+          <!-- _Todo single item (transform)-->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-uncheck-1.svg" onload="SVGInject(this)" alt="icon-unchecked">
+              </div>
+              <div>
+                تحويل التصميم إلى HTML + CSS 
+              </div>
+            </div>
+            <div class="col tag-container">
+              <span class="tag">css</span>
+            </div>
+          </div>
+          <!-- _Todo single item (responsive)-->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-uncheck-1.svg" onload="SVGInject(this)" alt="icon-unchecked">
+              </div>
+              <div>
+                جعل التصميم متجاوب مع المتصفحات الصغيرة (Responsive)
+              </div>
+            </div>
+            <div class="col tag-container">
+              <span class="tag">css</span>
+            </div>
+          </div>
+          <!-- _Todo single item (IE9 compatible)-->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-uncheck-1.svg" onload="SVGInject(this)" alt="icon-unchecked">
+              </div>
+              <div>
+                جعل التصميم متوافق كحد أدنى مع IE9
+              </div>
+            </div>
+            <div class="col tag-container">
+              <span class="tag">Browsers</span>
+            </div>
+          </div>
+          <!-- _Todo single item (Sass)-->
+          <div class="todo-item row">
+            <div class="col-10">
+              <div>
+                <img src="assets/icon-uncheck-1.svg" onload="SVGInject(this)" alt="icon-unchecked">
+              </div>
+              <div>
+                استخدام SASS لجعل ألوان التصميم سهلة التغيير (Skin-able/Theme-able)
+              </div>
+            </div>
+            <div class="col tag-container">
+              <span class="tag">SASS</span>
+            </div>
+          </div>
+        </div> <!-- ## End section card ## -->
+
+      </section> <!-- ## End first category section ## -->
+
+    </div> <!-- ## End main page content ## -->
+
+  </div><!-- ## End body wrapper ##-->
+
 </body>
 </html>

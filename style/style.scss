@@ -1,2 +1,108 @@
+// TODO move vars to another file
+//* Variables
 
+// colors options
+$nav-color: #273648; 
+$main-bg: #f9f9f9;
+$todo-bg: #ffffff;
+$nav-link-text: #edf4fc;
+$nav-link-bg-active: #4A90E2;
+$title-text: #30394A;
+$todo-text: #666666;
+$input-border: #dddddd;
+$select-item-text: #b5b5b5;
+
+
+// text options
+$body-font: 'dubai';
+$text-alignment: right;
+$text-base-color: #565656; 
+
+// shadow options 
+$default-shadow: 0 0 8px 0 rgba(0,0,0,0.04);
+
+// global style
+body {
+  font-family: $body-font;
+  text-align: $text-alignment;
+  direction: rtl;
+  height: 100%;
+  color: $text-base-color;
+}
+
+.body-wrapper{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $main-bg;
+  overflow-x: hidden;
+}
+
+#main-content{
+  width: 100%;
+  margin-right: 200px;
+  .top-bar{
+    background-color: $todo-bg;
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+    box-shadow: $default-shadow;
+    .dropdown-filter{
+      display: contents;
+      .dropdown-menu{
+        text-align: inherit;
+      }
+      .btn{
+        background-color: $todo-bg;
+        border: 1px solid $input-border;
+        color: $text-base-color;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 160px;
+      }
+    }
+  }
+  .category-section{
+    padding: 32px 16px;
+    .category-title{
+      font-size: 20px;
+      color: $title-text;
+      margin-bottom: 10px;
+    }
+    .category-card{
+      background-color: $todo-bg;
+      box-shadow: $default-shadow;
+      .todo-item{
+        display: flex;
+        padding: 16px;
+        justify-content: space-between;
+        align-items: center;
+        div{
+          display: flex;
+          align-items: center;
+          &:first-child{
+            margin-left: 13px;
+          }
+        }
+        .todo-done{
+          text-decoration: line-through;
+          opacity: 0.5;
+        }
+        .tag-container{
+          justify-content: flex-end;
+          .tag{
+            background-color: #e0dfe0;
+            border-radius: 100px;
+            padding: 8px;
+            font-size: 13px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// side navbar 
 @import 'sideNav'; 
