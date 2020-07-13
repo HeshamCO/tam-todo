@@ -4,6 +4,8 @@ body {
   direction: rtl;
   height: 100%;
   color: #565656;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .body-wrapper {
@@ -103,11 +105,13 @@ body {
 
 .side-nav .profile-container .profile-text {
   font-size: 14px;
+  line-height: 24px;
 }
 
 .side-nav .profile-container .profile-text :last-child {
   font-size: 11px;
   opacity: 0.5;
+  line-height: 18px;
 }
 
 .hide-nav {
@@ -119,6 +123,7 @@ body {
   margin-right: 200px;
   -webkit-transition: margin 0.1s ease-in-out;
   transition: margin 0.1s ease-in-out;
+  padding-bottom: 32px;
 }
 
 #main-content .top-bar {
@@ -133,6 +138,7 @@ body {
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
           box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
   position: relative;
+  margin-bottom: 16px;
 }
 
 #main-content .top-bar #open-side-nav-btn {
@@ -170,7 +176,7 @@ body {
 }
 
 #main-content .category-section {
-  padding: 32px 16px;
+  padding: 16px;
 }
 
 #main-content .category-section .category-title {

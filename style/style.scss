@@ -1,25 +1,5 @@
-// TODO move vars to another file
-//* Variables
-
-// colors options
-$nav-color: #273648; 
-$main-bg: #f9f9f9;
-$todo-bg: #ffffff;
-$nav-link-text: #edf4fc;
-$nav-link-bg-active: #4A90E2;
-$title-text: #30394A;
-$todo-text: #666666;
-$input-border: #dddddd;
-$select-item-text: #b5b5b5;
-
-
-// text options
-$body-font: 'dubai';
-$text-alignment: right;
-$text-base-color: #565656; 
-
-// shadow options 
-$default-shadow: 0 0 8px 0 rgba(0,0,0,0.04);
+//global variables (style/_variables.scss)
+@import 'variables';
 
 // global style
 body {
@@ -28,6 +8,8 @@ body {
   direction: rtl;
   height: 100%;
   color: $text-base-color;
+  font-size: $base-font-size;
+  line-height: $base-font-height;
 }
 
 .body-wrapper{
@@ -39,8 +21,8 @@ body {
 }
 
 
-// side navbar style
+// side navbar style (style/_sideNav.scss)
 @import 'sideNav';
 
-// add main page style
+// add main page style (style/_mainPage.scss)
 @import 'mainPage';
