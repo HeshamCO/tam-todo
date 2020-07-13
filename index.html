@@ -14,7 +14,9 @@
 
   <!-- jQuery, sortable JS and main JS file -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
+  <script src="js/svg-inject.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Bootstrap JS, Popper.js, -->
@@ -23,6 +25,39 @@
 
 </head>
 <body>
+  <!-- ## body wrapper ##-->
+  <div class="body-wrapper">
+    <!-- side navbar -->
+    <aside class="side-nav">
+      <img src="assets/logo.png" alt="tam-logo" class="logo">
+      <img src="assets/icon-close.svg" onload="SVGInject(this)" alt="close-icon" id="close-icon"/>
+      <nav class="nav">
+        <div class="nav-item active">
+          <img src="assets/icon-list.svg" onload="SVGInject(this)" class="icon" alt="icon-list" />
+          <span>المهام</span>
+        </div>
+        <div class="nav-item">
+          <img src="assets/icon-user.svg" onload="SVGInject(this)" class="icon" alt="icon-user" />
+          <span>الأعضاء</span>
+        </div>
+        <div class="nav-item">
+          <img src="assets/icon-creditcard.svg" onload="SVGInject(this)" class="icon" alt="icon-creditcard" />
+          <span>الدفع والفواتير</span>
+        </div>
+        <div class="nav-item">
+          <img src="assets/icon-settings.svg" onload="SVGInject(this)" class="icon" alt="icon-settings" />
+          <span>إعدادات</span>
+        </div>
+      </nav>
+      <div class="profile-container">
+        <img src="assets/avatar.png" alt="profile-avatar"/>
+        <div class="profile-text">
+          <div>محمد عبدالله</div>
+          <div>الشركة المحدودة</div>
+        </div>
+        <img src="assets/icon-arrow-down-small.png" class="icon" alt="icon-arrow-down" />
+      </div>
+    </aside>  <!-- ## End side navbar ## -->
   
 </body>
 </html>

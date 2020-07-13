@@ -1,0 +1,68 @@
+.side-nav{
+  background-color: $nav-color;
+  width: 200px;
+  color: $nav-link-text;
+  position: fixed;
+  height: 100%;
+  .logo{
+    margin: 16px;
+  }
+  #close-icon{
+    position: absolute;
+    left: 11px;
+    top: 11px;
+    filter: brightness(100);
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .nav{
+    .nav-item{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     padding: 16px 10px;
+     span{
+       width: 100%;
+     }
+     &:hover{
+      opacity: 0.5;
+      cursor: pointer;
+     }
+     span{
+       padding-right: 10px;
+     }
+     .icon{
+       filter: brightness(100);
+     }
+    }
+    .active{
+      background-color: $nav-link-bg-active;
+      span{
+        background-image: url('/assets/icon-arrow-left.svg');
+        background-repeat: no-repeat;
+        background-position: center left;
+        filter: brightness(100);
+      }
+    }
+  }
+  .profile-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid #3D4A5A;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .profile-text{
+      font-size: 14px;
+      :last-child{
+        font-size: 11px;
+        opacity: 0.5;
+      }
+    }
+  }
+
+}
